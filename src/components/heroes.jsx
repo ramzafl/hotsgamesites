@@ -68,7 +68,6 @@ class Heroes extends Component {
       filtered = allHeroes.filter(m => m.role === selectedRole);
 
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
-
     const heroes = paginate(sorted, currentPage, pageSize);
 
     return { totalCount: filtered.length, data: heroes };
@@ -80,7 +79,6 @@ class Heroes extends Component {
     const { totalCount, data: heroes } = this.getPagedData();
     return (
       <div className="row">
-        {" "}
         <div className="col-3">
           <ListGroup
             items={roles}

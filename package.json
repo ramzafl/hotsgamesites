@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "aws s3 sync build/ s3://brentthompson.tech",
+    "deploy": "aws s3 sync build/ s3://brentthompson.tech && aws s3 sync build/ s3://www.brentthompson.tech",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
